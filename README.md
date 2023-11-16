@@ -1,14 +1,20 @@
 # devops_ansible
-Using Python scripts and few libraries, we can achieved what we would like to implement.
+Using Python scripts and a few libraries, we can achieve what we would like to implement.
 
+Write a backup script that:
+1. Connects to another server and copies data in an encrypted and compressed format.
+2. Allows changing certain parameters when running the script, such as the backup
+directory, user, the IP of the remote server, debug mode, directories to copy, and the choice
+between full and incremental backup.
+3. Utilizes logrotate for rotating outdated versions.
+The logic for full and incremental backups includes creating two folders for full and incremental
+backups (similarly for incremental):
+- Full (Inc): stores the most recent backup.
+- FullOld (IncOld): stores the previous backups, which are rotated.
 
 
 Install `paramiko` library using pip install
 pip install `paramiko`
-
-
-Python file imports:
-
 
 
 import os
